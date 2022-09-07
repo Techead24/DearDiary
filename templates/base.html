@@ -9,7 +9,16 @@
 </head>
 
 <body>
-    <h1><a href="/">Dear diary …</a></h1>
+    <h1><a href="/">Dear diary</a></h1>
+
+<div class = "navbar-nav">
+    {% if user.is_authenticated %}
+        <a class="nav-item nav-link" href="{% 'logout' %}">Logout</a>
+    {% else %}
+        <a class="nav-item nav-link" href="{% 'login' %}">Login</a>
+        <a class="nav-item nav-link" href="{%'register' %}">Register</a>
+    {% endif %}
+</div>
 
     {% block content %}{% endblock %}
 
