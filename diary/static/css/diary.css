@@ -1,12 +1,65 @@
-/* * {
+* {
     box-sizing: border-box;
-} */
+}
+
 
 body{
     font-family: sans-serif;
     font-size: 18px;
-    background-color:aqua;
+    background-color:yellow;
 }
+
+/* LOGIN PAGE */
+
+.title{
+    font-size: 70px;
+    /* text-align: center; */
+
+}
+
+#id_username, #id_password{
+    width: 30%;
+    margin-bottom:2%;
+}
+
+
+#login-btn{
+    margin-top:2%;
+    margin-bottom: 2%;
+    padding:0;
+}
+
+
+#login-text{
+    font-size:25px;
+    bottom: 40%;
+    margin-bottom:2%;
+}
+
+.content_section{
+    width:40%;
+}
+
+
+/* ENTRY LIST */
+
+.logout-btn{
+    left:90%;
+    position:absolute;
+    bottom:86%;
+}
+
+
+ 
+.profile-btn{
+    left:82%;
+    position:absolute;
+    bottom:86%;
+}
+
+
+
+
 
 a {
     color: inherit;
@@ -104,6 +157,3 @@ input[type="submit"] {
     padding-left: 80%;
 }
 
-.body .col{
-    background-color: green;
-}
