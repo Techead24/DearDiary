@@ -7,8 +7,8 @@
         <p>{{ entry.content }}</p>
     </article>
     <p>
-        <a href="{% url 'entry-update' entry.id %}">✍️ Edit</a>
-        <a href="{% url 'entry-delete' entry.id %}">⛔ Delete</a>
+        <a id = 'edit' href="{% url 'entry-update' entry.id %}">✍️ Edit</a>
+        <a id = 'delete' href="{% url 'entry-delete' entry.id %}">⛔ Delete</a>
     </p>
 {% endblock %}
 

@@ -1,9 +1,40 @@
 {% extends "entries\base.html" %}
 
 {% block content %}
-    <h1>About</h1>
-    <h2>Hi Friend! - thank you for choosing Dear Diary :)</h2>
-    <h3>Dear Diary has some built-in features that handle user-submitted data to make it safe for an application. These features escape possible dangerous characters in requests, making the data safe for the application to use. </h3>
+    <h1 id = 'about-page'>Hi Friend! - thank you for choosing Dear Diary :)</h1>
+
+    <h3 id="about-title">About</h3>
+    <p id="intro">Dear Diary has many built-in features that handle user-submitted data, to make it safe for storing your personal thoughts. These features escape possible dangerous characters in requests, making the data safe for the application to use.</p> 
+
+    <h3 id="pass-man-title">Password Management</h3>
+    <p id="pass-man-sum">Dear Diary endeavors to provide a secure and flexible set of tools for managing user passwords. Your passwords are stored using a PBKDF2 algorithm with a SHA256 hash; this is a password stretching mechanism recommended by NIST (National Institute of Standards and Technology).</p>
+
+    <h3 id="attacks-title">Attacks</h3>
+    <p id="attacks-summary">Dear Diary uses the CSRF middleware which provides easy-to-use protection against Cross Site Request Forgeries. This type of attack occurs when a malicious website contains a link, a form button or some JavaScript that is intended to perform some action on out website, using the credentials of a logged-in user who visits the malicious site in their browser. 
+        CSRF ensures that GET requests (and other ‘safe’ methods) are side effect free. Requests via ‘unsafe’ methods, such as POST, PUT, and DELETE, are rejected if they do not contain the specific CSRF tokens that inbuilt into our site.<br><br>
+        Dear Diary also provides other fomrs of protection such as:
+        <ul id="protections">
+            <li>- SQL injection protection</li>
+            <li>- Clickjacking protection</li>
+            <li>- Enforcing SSL/HTTPS encryption</li>
+            <li>- Host header validation</li>
+    </ul>
+
+    <h3>Summary</h3>
+    <p id="summary">I know what you're thinking, and the answer is YES!. We can store your deepest and darkest secrets - this can include (but are not limited to):
+        <ul id="secrets">
+            <li>- Murders</li>
+            <li>- Theft</li>
+            <li>- Taking money out of the swear jar</li>
+            <li>- Supporting Arsenal...(we dont judge)</li>
+        </ul>
+
+        Your thoughts are safe with us!
+    </p>
+
+    </p>
+
+
     
     <div class = "navbar-nav">
         {% if user.is_authenticated %}
