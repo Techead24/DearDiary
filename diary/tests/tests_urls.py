@@ -31,24 +31,27 @@ class TestURLs(TestCase):
         print(resolve(url)) 
         self.assertEquals(resolve(url).func.view_class, ECV)
     
-    # def test_entrydetail(self):
-    #     testuser = self.user = User.objects.create_user('max', 'lennon@thebeatles.com', 'password')
-    #     obj = Entry.objects.create( title = 'test',content = 'testing', date_created = '2022-12-19 09:30', user = testuser)
-    #     url = reverse('entry-detail')
-    #     print(resolve(url)) 
-    #     response = self.client.get(reverse('entry-detail', kwargs={'pk':obj.pk}))
-    #     self.assertEquals(resolve(response).func.view_class, EDV)
+    def test_entrydetail(self):
+        self.user = User.objects.create_user('max', 'lennon@thebeatles.com', 'password')
+        self.post = Entry.objects.create( title = 'test',content = 'testing', date_created = '2022-12-19 09:30', user=self.user)
+        self.post.save()
+        response = reverse('entry-detail', args=[self.post.pk])
+        self.assertEquals(resolve(response).func.view_class, EDV)
         
         
-    # def test_entrydelete(self):
-    #     url = reverse('entry-delete')
-    #     print(resolve(url)) 
-    #     self.assertEquals(resolve(url).func.view_class, EntryDeleteView)
+    def test_entrydelete(self):
+        self.user = User.objects.create_user('max', 'lennon@thebeatles.com', 'password')
+        self.post = Entry.objects.create( title = 'test',content = 'testing', date_created = '2022-12-19 09:30', user=self.user)
+        url = reverse('entry-delete', args=[self.post.pk])
+        print(resolve(url)) 
+        self.assertEquals(resolve(url).func.view_class, EntryDeleteView)
         
-    # def test_entryupdate(self):
-    #     url = reverse('entry-update', args=['entry/1'])
-    #     print(resolve(url)) 
-    #     self.assertEquals(resolve(url).func.view_class, EUV)
+    def test_entryupdate(self):
+        self.user = User.objects.create_user('max', 'lennon@thebeatles.com', 'password')
+        self.post = Entry.objects.create( title = 'test',content = 'testing', date_created = '2022-12-19 09:30', user=self.user)
+        url = reverse('entry-update', args=[self.post.pk])
+        print(resolve(url)) 
+        self.assertEquals(resolve(url).func.view_class, EUV)
     
     
     def test_about(self):

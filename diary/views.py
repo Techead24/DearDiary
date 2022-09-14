@@ -14,7 +14,6 @@ from django import forms
 import urllib.request
 
 
-# user = self.request.user
 
 
 

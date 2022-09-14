@@ -21,6 +21,3 @@ def register(request):
 def profile(request):
     return render(request, 'users/profile.html')
 
-# @login_required(login_url='/login')
-# def logged_in(request):
-#     return render(request, 'users/login.html')
