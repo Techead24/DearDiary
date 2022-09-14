@@ -58,7 +58,7 @@ class TestViews(TestCase):
     
     
     
-    #ENTRY DETAIL - FOREAIGN KEY USED
+    #ENTRY DETAIL - FOREIGN KEY USED
     def test_entrydetail_GET(self):
         self.client = Client()
         testuser = User.objects.create_user('linda', 'linda@gmail.com', 'champagne191')
