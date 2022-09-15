@@ -1,0 +1,61 @@
+
+
+.background{
+    background-color: green;
+}
+
+.title{
+    font-size: 50px;
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.logout-btn{
+    left:95%;
+    position:absolute;
+    bottom:80%;
+}
+
+
+@media (max-width:1000px ){ 
+.profile-btn{
+    left:90%;
+    position:absolute;
+    bottom:80%;
+}}
+
+
+/* #entry-title{
+    
+    font-size: 1.4em;
+    margin: 0;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    vertical-align: top;
+} */
+
+
+
+/* 
+#datetime{
+    padding-left: 15%;
+    font-family: sans-serif;
+} */
+
+h2, h3 {
+    font-size: 25x;
+    margin: 5;
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    vertical-align: top;
+    font-family: sans-serif;
+    
+}
+
+#test{
+    left:82%;
+    position:absolute;
+    bottom:90%;
+    size: 20%;
+}

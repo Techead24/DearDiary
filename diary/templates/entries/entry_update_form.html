@@ -1,9 +1,10 @@
 {% extends "entries/base.html" %}
 {% block content %}
+    <div class="entry-form">
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Save">
+        <input id = 'save' type="submit" value="Save">
     </form>
     {% if entry %}
         <a href="{% url 'entry-detail' entry.id %}">
@@ -13,5 +14,6 @@
         <a href="{% url 'entry-list' %}">
             <button>Cancel</button>
         </a>
+    </div>
     {% endif %}
 {% endblock %}

@@ -1,17 +1,23 @@
 {% extends "entries/base.html" %}
 {% block content %}
-    <form method="post">
+<div class="entry-form">
+
+    <form id = 'create' method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Save">
+       <input id = 'save' type="submit" value="Save">
+
     </form>
+
+
     {% if entry %}
         <a href="{% url 'entry-detail' entry.i d %}">
-            <button>Cancel</button>
+            <button id = "cancel-button">Cancel</button>
         </a>
     {% else %}
         <a href="{% url 'entry-list' %}">
-            <button>Cancel</button>
+            <button id="cancel-btn">Cancel</button>
         </a>
+</div>
     {% endif %}
 {% endblock %}

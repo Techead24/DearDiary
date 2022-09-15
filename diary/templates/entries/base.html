@@ -8,27 +8,50 @@
     <link rel="stylesheet" href="{% static 'css/diary.css' %}">
 </head>
 
-<body>
-    <h1><a href="/">Dear diary work please</a></h1>
-        <div class = "navbar-nav">
-            {% if user.is_authenticated %}
-            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
-            {% else %}
-            <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-            <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
-            {% endif %}
-        </div>
-    
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert aler-{{message.tags}}">
-                {{message}}
+
+
+    <body class="background">
+
+        <nav class='navigation'>
+            <ul id="nav-items">
+                <li><a href="{% url 'about-page' %}">About</a></li>
+                {% if user.is_authenticated %}
+                <li><a class="profile" href="{% url 'profile' %}">Profile</a></li>
+                <li ><a class="logout" href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a class="login" href="{% url 'login' %}">Login</a></li>
+                <li><a class="register" href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+
+        <h1 class="title"><a href="{% url 'entry-list' %}">Dear Diary...📒🖋</a></h1>
+
+
+        <!-- <p id = 'about-btn'><a href= "{% url 'about-page' %}">About</a></p> -->
+        
+            <div class = "navbar-nav">
+                {% if user.is_authenticated %}
+                <!-- <button class = 'logout-btn'><a class="logout" href="{% url 'logout' %}">Logout</a></button> -->
+                <!-- <button class = 'profile-btn'><a class="profile" href="{% url 'profile' %}">Profile</a></button> -->
+
+                {% else %}
+                <!-- <button class="login-reg-btn"><a class="login" href="{% url 'login' %}">Loginn</a></button> -->
+                <!-- <button><a class="register" href="{% url 'register' %}">Register</a></button> -->
+                {% endif %}
             </div>
-        {% endfor %}
-    {% endif %}
+        
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert aler-{{message.tags}}">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
 
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
 
-</body>
+    </body>
 
 </html>
