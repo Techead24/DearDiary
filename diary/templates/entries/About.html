@@ -3,16 +3,16 @@
 {% block content %}
     <h1 id = 'about-page'>Hi Friend! - thank you for choosing Dear Diary :)</h1>
 
-    <h3 id="about-title">About</h3>
-    <p id="intro">Dear Diary has many built-in features that handle user-submitted data, to make it safe for storing your personal thoughts. These features escape possible dangerous characters in requests, making the data safe for the application to use.</p> 
+    <h3 id="about-title">About👀</h3>
+    <p id="intro"> Dear Diary has many built-in features that handle user-submitted data, to make it safe for storing your personal thoughts.These features escape possible dangerous characters in requests, making the data safe for the application to use.</p> 
 
-    <h3 id="pass-man-title">Password Management</h3>
+    <h3 id="pass-man-title">Password Management🔑</h3>
     <p id="pass-man-sum">Dear Diary endeavors to provide a secure and flexible set of tools for managing user passwords. Your passwords are stored using a PBKDF2 algorithm with a SHA256 hash; this is a password stretching mechanism recommended by NIST (National Institute of Standards and Technology).</p>
 
-    <h3 id="attacks-title">Attacks</h3>
-    <p id="attacks-summary">Dear Diary uses the CSRF middleware which provides easy-to-use protection against Cross Site Request Forgeries. This type of attack occurs when a malicious website contains a link, a form button or some JavaScript that is intended to perform some action on out website, using the credentials of a logged-in user who visits the malicious site in their browser. 
+    <h3 id="attacks-title">Attacks❌</h3>
+    <p id="attacks-summary"> Dear Diary uses the CSRF middleware which provides easy-to-use protection against Cross Site Request Forgeries. This type of attack occurs when a malicious website contains a link, a form button or some JavaScript that is intended to perform some action on out website, using the credentials of a logged-in user who visits the malicious site in their browser. 
         CSRF ensures that GET requests (and other ‘safe’ methods) are side effect free. Requests via ‘unsafe’ methods, such as POST, PUT, and DELETE, are rejected if they do not contain the specific CSRF tokens that inbuilt into our site.<br><br>
-        Dear Diary also provides other fomrs of protection such as:
+        Dear Diary also provides other fomrs of protection such as: </p>
         <ul id="protections">
             <li>- SQL injection protection</li>
             <li>- Clickjacking protection</li>
@@ -20,30 +20,29 @@
             <li>- Host header validation</li>
     </ul>
 
-    <h3>Summary</h3>
-    <p id="summary">I know what you're thinking, and the answer is YES!. We can store your deepest and darkest secrets - this can include (but are not limited to):
+    <h3 id="summary-title">Summary🤓</h3>
+    <p id="summary">I know what you're thinking, and the answer is YES!. We can store your deepest and darkest secrets - this can include (but are not limited to): </p>
+
         <ul id="secrets">
             <li>- Murders</li>
             <li>- Theft</li>
             <li>- Taking money out of the swear jar</li>
             <li>- Supporting Arsenal...(we dont judge)</li>
         </ul>
-
-        Your thoughts are safe with us!
-    </p>
-
-    </p>
-
+    <i><p><br>Your thoughts are safe with us!🤐</p></i>
 
     
+
+
+
     <div class = "navbar-nav">
         {% if user.is_authenticated %}
         <!-- <button class = 'logout-bttn'><a class="logout" href="{% url 'logout' %}">Logout</a></button>
         <button><a class="profile" href="{% url 'profile' %}">Profile</a></button> -->
 
         {% else %}
-        <button class="login-reg-btn"><a class="login" href="{% url 'login' %}">Login</a></button>
-        <button><a class="register" href="{% url 'register' %}">Register</a></button>
+        <!-- <button class="login-reg-btn"><a class="login" href="{% url 'login' %}">Login</a></button>
+        <button><a class="register" href="{% url 'register' %}">Register</a></button> -->
         {% endif %}
     </div>
 

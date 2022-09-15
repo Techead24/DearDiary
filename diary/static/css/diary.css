@@ -1,32 +1,46 @@
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    margin:0;
+    padding:0;
+    
 }
 
 
 body{
     font-family: sans-serif;
     font-size: 18px;
-    background-color:yellow;
+    background-color:yellowgreen;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: sticky; */
+    overflow: auto;
+    /* width: 100%; */
+    height: 100vh;
 }
 
 /* LOGIN PAGE */
 
 .title{
-    font-size: 70px;
-    /* text-align: center; */
+    font-size: 80px;
+    margin-top:3%;
+    text-align: center;
+    font-family:cursive;
+    font-style: italic;
 
 }
 
-#id_username, #id_password{
+#id_username, #id_password, #id_email, #id_password1, #id_password2{
     width: 30%;
     margin-bottom:2%;
 }
+
 
 
 #login-btn{
     margin-top:2%;
     margin-bottom: 2%;
     padding:0;
+    background-color:yellow;
 }
 
 
@@ -38,6 +52,10 @@ body{
 
 .content_section{
     width:40%;
+    /* padding-left: 1%; */
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 5%;
 }
 
 
@@ -57,17 +75,26 @@ body{
     bottom:86%;
 }
 
-
-
+/* #entry-title, #datetime {
+    font-size: 25x;
+    margin: 5;
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    vertical-align: top;
+    font-family: sans-serif;
+    
+} */
 
 
 a {
     color: inherit;
 }
+
 a:hover {
     opacity: 0.7;
 }
 
+/* title */
 h1 {
     font-size: 2.8em;
 }
@@ -76,6 +103,8 @@ h1 a {
     text-decoration: none;
 }
 
+
+/* entrylist items */
 h2, h3 {
     font-size: 1.4em;
     margin: 0;
@@ -85,7 +114,10 @@ h2, h3 {
 }
 
 h2 {
-    background-color: aquamarine;
+    background-color: lightseagreen;
+    font-family: Calibri;
+    margin-left: 1%;
+    margin-top:1%;
 }
 
 .mark {
@@ -99,13 +131,14 @@ article {
     margin-bottom: 0.5rem;
 }
 
-p {
+/* any paragraph */
+/* p {
     font-size: 1.2em;
     padding-left: 1rem;
     line-height: 1.3em;
     max-width: 36rem;
     color: dimgray;
-}
+} */
 
 em {
     font-style: normal;
@@ -124,16 +157,20 @@ input {
     font-size: inherit;
     min-height: 2.5em;
     padding: 0 1rem;
+    background-color: yellow;
 }
 
 input[type="text"],
 textarea {
     width: 100%;
+    text-align: center;
+
 }
 
 textarea {
     padding: 0.5rem 1rem;
     font-family: sans-serif;
+    text-align: center;
 }
 
 button,
@@ -151,9 +188,156 @@ input[type="submit"] {
     background-color: lightsalmon;
 }
 
-
-.logout-bttn{
-    background-color:aqua;
-    padding-left: 80%;
+/* mine */
+#logout-msg{
+    color: black;
+    font-size: 25px;
+    margin-right: 100px;
 }
 
+.login-again{
+    padding-left:1%;
+}
+
+
+
+
+/* NAV BAR */
+
+#nav-items{
+    margin-left:82%;
+    padding:0;
+    padding-top: 1%;
+
+}
+
+#nav-items li {
+    display: inline;
+  }
+
+#nav-items li, li {
+    margin-left: 35px;
+  }
+
+#nav-items li a {
+    color: #444;
+    text-decoration: none;
+  }
+
+nav{
+    overflow: hidden;
+    background-color:yellow;
+    width: 100%;
+    background-repeat: no-repeat;
+    /* position:fixed; */
+    padding: 0%;
+    margin: 0;
+    list-style: none;
+
+}
+
+.entry-form {
+    text-align:center;
+    padding-top: 2%;
+}
+
+ #id_title, #id_content{
+    text-align:center;
+    width:50%;
+}
+
+#id_content{
+    padding-bottom: 10%;
+}
+
+#logout-msg{
+    padding-top: 5%;
+    font-size: 30px;
+}
+
+.border-top.pt-3{
+    margin-top:5%;
+}
+
+/* ABOUT */
+#about-page{
+    padding-top:3%;
+    font-size:40px;
+    padding-bottom: 2%;
+    text-align: center;
+    font-family: Calibri;
+}
+
+
+#intro{
+    margin-left: 1%;
+
+}
+
+h3{
+    font-family: Calibri;
+    
+}
+
+#summary-title{
+    padding-top: 3%;
+    font-family: Calibri;
+}
+
+
+
+p{
+    margin-bottom:1%;
+    margin-left:1%;
+    font-family:Calibri;
+    color: black;
+}
+
+ul li{
+    font-family: Calibri;
+}
+
+
+#entry-detail-body{
+    margin-top: 3%;
+    font-size: 20px;
+    font-family:Calibri; 
+    background-color:bisque;
+    margin-right:2%;
+}
+
+
+.content_section_register{
+    width:50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 3%;
+    
+}
+
+.helptext{
+    font-size:15px;
+}
+
+#join-today{
+    font-size:25px;
+    bottom: 40%;
+    margin-bottom:2%;
+}
+
+label{
+    margin-top:1%;
+}
+
+#signup-btn{
+    margin-top:1%;
+    background-color:yellow;
+}
+
+.already-have-acc{
+    margin-top:1%
+}
+
+#addentry{
+    background-color: yellow;
+}

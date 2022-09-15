@@ -2,9 +2,9 @@
 
 {% block content %}
 
-    <article>
+    <article id = 'addy'>
         <!-- <h2 class="mark">{% now "Y-m-d H:i" %}</em></h2> -->
-        <a styl href="{% url 'entry-create' %}"><button id='addentry'>Add new entry</button></a>
+        <a id = 'add' href="{% url 'entry-create' %}"><button id='addentry'>Add new entry</button></a>
     </article>
 
     {% for entry in entry_list %}
